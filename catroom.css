@@ -1,0 +1,21 @@
+.bulboff1{
+    height:10%;
+    width:10%;
+}
+body{
+    background-color: black;
+    height:100vh;
+    width:100%;
+}
+.darkcat1{
+    height:25%;
+    width:25%;
+}
+.tab{
+    width:20%;
+    background-color: rgb(65, 64, 64);
+    border-radius: 6px;
+    padding:10px;
+    position: absolute;
+    left:42%;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function primenumber(){
+            let n = document.getElementById("prime").value;
+            for (i = 1; i <= n; i++) {
+            count = 0;
+            for (j = 2; j <= i / 2; j++) {
+            if (i % j == 0) {
+           count++;
+           break;
+  }
+  }
+         if (count == 0) {
+          document.write(i);
+          document.write("<br>");
+     }
+  }
+        }
+        function fibonacci(){
+            var a=parseInt(document.getElementById("range").value);
+            var b=0,c=1,d;
+            document.getElementById("first").value=b;
+            document.getElementById("second").value=c;
+            document.write(b);
+            document.write("<br>");
+            document.write(c);
+            document.write("<br>");
+            for(i=2;i<=a+1;i++){
+                d=b+c;
+                document.write(d);
+                document.write("<br>");
+                b=c;
+                c=d;
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h2>Prime Number</h2>
+    Enter the Number : <input type="text" id="prime"><br>
+    <button onclick="primenumber()">Click to Generate Prime Number</button>
+    <h2>Fibonacci Series</h2>
+    Enter the First Number : <input type="text" id="first"><br>
+    Enter the Second Number : <input type="text" id="second"><br>
+    Enter the Range : <input type="text" id="range"><br>
+    <button onclick="fibonacci()">Click to Generate Fibonacci Series</button><br><br><br>
+</body>
+</html>

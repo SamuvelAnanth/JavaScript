@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        function student(){
+    var m1=parseInt(document.getElementById("maths").value);
+    var m2=parseInt(document.getElementById("physics").value);
+    var m3=parseInt(document.getElementById("chemistry").value);
+    var m4=m1+m2+m3;
+    document.getElementById("total").value=m4;
+    var avg=m4/3;
+    document.getElementById("average").value=avg;
+    if(avg>=85&&m1>=40&&m2>=40&&m3>=40){
+        document.getElementById("grade").value="First Class O+ Grade";
+    }else if(avg<85&&avg>=70&&m1>=40&&m2>=40&&m3>=40){
+        document.getElementById("grade").value="First Class";
+    }else if(avg<70&&avg>=60&&m1>=40&&m2>=40&&m3>=40){
+        document.getElementById("grade").value="Second Class";
+    }else if(avg<60&&avg>=40&&m1>=40&&m2>=40&&m3>=40){
+        document.getElementById("grade").value="Third Class";
+    }else{
+        document.getElementById("grade").value="Re-Appear";
+    }
+    if(m1>=40&&m2>=40&&m3>=40){
+        document.getElementById("result").value="Pass";
+    }else{
+        document.getElementById("result").value="Fail";
+    }
+}
+    </script>
+    <title>Document</title>
+</head>
+<body bgcolor="black">
+    <table align="center">
+        <thead>
+            <th colspan="2"><h1 align="center" style="color: aqua;">Student Mark Details</h1></th>
+        </thead>
+        <tbody>
+            <tr><td><label for="stu_name" style="color: yellow; font-size: 25px;">Student Name : </label></td>
+            <td><input type="text" id="stu_name" style="background-color: black; color: chartreuse; font-size: 25px; font-family: 'Times New Roman', Times, serif;"></td></tr>
+            <tr><td><label for="maths" style="color: yellow; font-size: 25px;">Enter Maths Mark : </label></td>
+            <td><input type="text" id="maths" style="background-color: black; color: chartreuse; font-size: 25px; font-family: 'Times New Roman', Times, serif;"></td></tr>
+            <tr><td><label for="physics" style="color: yellow; font-size: 25px;">Enter Physics Mark : </label></td>
+            <td><input type="text" id="physics" style="background-color: black; color: chartreuse; font-size: 25px; font-family: 'Times New Roman', Times, serif;"></td></tr>
+            <tr><td><label for="chemistry" style="color: yellow; font-size: 25px;">Enter Chemistry Mark : </label></td>
+            <td><input type="text" id="chemistry" style="background-color: black; color: chartreuse; font-size: 25px; font-family: 'Times New Roman', Times, serif;"></td></tr>
+            <tr><td></td><td><button onclick="student()" style="background-color: black; color: palegreen ;font-size: 25px; font-family: 'Times New Roman', Times, serif; align-items : center;">Check</button></td></tr>
+            <tr><td><label for="total" style="color: yellow; font-size: 25px;">Total : </label></td>
+            <td><input type="text" id="total" style="background-color: black; color: chartreuse; font-size: 25px; font-family: 'Times New Roman', Times, serif;"></td></tr>
+            <tr><td><label for="average" style="color: yellow; font-size: 25px;">Average : </label></td>
+            <td><input type="text" id="average" style="background-color: black; color: chartreuse; font-size: 25px; font-family: 'Times New Roman', Times, serif;"></td></tr>
+            <tr><td><label for="grade" style="color: yellow; font-size: 25px;">Grade : </label></td>
+            <td><input type="text" id="grade" style="background-color: black; color: chartreuse; font-size: 25px; font-family: 'Times New Roman', Times, serif;"></td></tr>
+            <tr><td><label for="result" style="color: yellow; font-size: 25px;">Result : </label></td>
+            <td><input type="text" id="result" style="background-color: black; color: chartreuse; font-size: 25px; font-family: 'Times New Roman', Times, serif;"></td></tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Student Details</title>
+</head>
+<body class="bg-dark">
+    <label for="studentname">Student Name : </label>
+    <input type="text" id="studentname"><br>
+    <label for="rollno">Roll No : </label>
+    <input type="text" id="rollno"><br>
+    <label for="maths">Maths : </label>
+    <input type="number" id="maths"><br>
+    <label for="physics">Physics : </label>
+    <input type="number" id="physics"><br>
+    <label for="chemistry">Chemistry : </label>
+    <input type="number" id="chemistry"><br>
+    <button onclick="studentInformation()" class="btn bg-success text-light">Submit</button>
+    <script>
+        var studentList=[];
+        function studentInformation(){
+            var stu_name=document.getElementById("studentname").value;
+            var roll_no=document.getElementById("rollno").value;
+            var mathsmark=parseInt(document.getElementById("maths").value);
+            var physicsmark=parseInt(document.getElementById("physics").value);
+            var chemistrymark=parseInt(document.getElementById("chemistry").value);
+            total=mathsmark+physicsmark+chemistrymark;
+            average=total/3;
+            if(average>=85&&mathsmark>=40&&physicsmark>=40&&chemistrymark>=40){
+                var grade="First Class O+ Grade";
+            }else if(average<85&&average>=70&&mathsmark>=40&&physicsmark>=40&&chemistrymark>=40){
+                var grade="First Class";
+            }else if(average<70&&average>=60&&mathsmark>=40&&physicsmark>=40&&chemistrymark>=40){
+                var grade="Second Class";
+            }else if(average<60&&average>=40&&mathsmark>=40&&physicsmark>=40&&chemistrymark>=40){
+                var grade="Third Class";
+            }else{
+                var grade="Re-Appear";
+            }
+            if(mathsmark>=40&&physicsmark>=40&&chemistrymark>=40){
+                var result="Pass";
+            }else{
+                var result="Fail";
+            }
+            if(stu_name==""||stu_name==null||roll_no==""||roll_no==null||mathsmark==""||mathsmark==null||physicsmark==""||physicsmark==null||chemistrymark==""||chemistrymark==null){
+                alert("Please Enter All Fields");
+            }else if(mathsmark>100||physicsmark>100||chemistrymark>100){
+                alert("Please Enter Valid Mark");
+            }else{
+                var studentInfo={
+                    "student_name":stu_name,
+                    "roll_number":roll_no,
+                    "maths_mark":mathsmark,
+                    "physics_mark":physicsmark,
+                    "chemistry_mark":chemistrymark,
+                    "total":total,
+                    "average":average,
+                    "grade":grade,
+                    "result":result
+                }
+                studentList.push(studentInfo);
+                var display="<table border='1'><thead><th>Student Name</th><th>Roll Number</th><th>Maths</th><th>Physics</th><th>Chemistry</th><th>Total</th><th>Average</th><th>Grade</th></thead><tbody id='table-body'></tbody></table>";
+                document.getElementById("").innerHTML=display;
+                console.log(studentList);
+                setTimeout(() => {
+                document.getElementById("studentname").value=null;
+                document.getElementById("rollno").value=null;
+                document.getElementById("maths").value=null;
+                document.getElementById("physics").value=null;
+                document.getElementById("chemistry").value=null;
+                studentInfo={};
+            }, 500);
+            }
+        }
+    </script>
+</body>
+</html>

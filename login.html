@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script> 
+        var userList=[];
+        function userInformation(){
+            var fname=document.getElementById("firstname").value;
+            var lname=document.getElementById("lastname").value;
+            var mail=document.getElementById("emailid").value;
+            var phone=document.getElementById("phoneno").value;
+            if(fname==""||fname==null){
+                alert("Please fill the First Name");
+            }else if(mail==""||mail==null){
+                alert("Please fill the First E-Mail ID");
+            }else if(phone==""||phone==null){
+                alert("Please fill the Phone Number");
+            }else{
+                let userInfo={
+                    "Firstname":fname,
+                    "Lastname":lname=="" ?"--":lname,
+                    "E-Mail-ID": mail,
+                    "Phone_no":phone
+                }
+                userList.push(userInfo);
+                console.log(userList);
+                localStorage.setItem("userList",JSON.stringify(userList))
+                setTimeout(() => {
+                    alert("Registered Successfully");
+                    document.getElementById("firstname").value=null;
+                    document.getElementById("lastname").value=null;
+                    document.getElementById("emailid").value=null;
+                    document.getElementById("phoneno").value=null;
+                    userInfo={};
+                    console.log(userInfo);
+                }, 1000);
+                
+            }
+    }   
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    First Name* : <input type="text" id="firstname"><br>
+    Last Name* : <input type="text" id="lastname"><br>
+    E-Mail ID* : <input type="email" id="emailid"><br>
+    Phone No* : <input type="number" id="phoneno"><br>
+    <button onclick="userInformation()">Submit</button>
+</body>
+</html>

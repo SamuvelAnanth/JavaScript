@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(37, 232, 216);
+}
+.lights{
+    border-radius:30px;
+    width:5%;
+    background-color: rgb(0, 26, 65);
+    padding:30px;
+    position: absolute;
+    left:10%;
+    bottom:50%;
+    height: 37vh;    
+}
+.stop{
+    border-radius:50px;
+    height: 50px;
+    width:50px;
+    margin-top:30px;
+    position:relative;
+    right:18px;
+    bottom:30px;
+}
+.buttons{
+    background-color: rgb(0, 26, 65);
+    color:white;
+    border-radius: 10px;
+    width:5%;
+    margin:30px;
+    margin-top: 5px;
+    border:none;
+}
+.buttons:hover{
+    color:rgb(255, 255, 255);
+}
+h1{
+    margin:30px;
+}
+.allbtns{
+ margin-top:20px;
+}
