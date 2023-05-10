@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Billing System</title>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body class="bg-dark text-light">
+    <h1>Billing System</h1>
+        
+        <label for="pname">Product Name : </label>
+        <input type="text" id="pname" name="pname" value="" placeholder="Product Name" onfocus><br>
+        <label for="quantity">Quantity : </label>
+        <input type="text"  id="quantity" name="quantity" value="" placeholder="Quantity"><br>
+        <label for="price">Price : </label>
+        <input type="text" name="price" id="price" value="" placeholder="Price"><br>
+        <label for="tax">Tax : </label>
+        <input type="text" name="tax" id="tax" value="" placeholder="Tax"><br>
+        <button type="button" class="btn bg-success text-light" onclick="addProduct()">Add</button>
+    <form action="">
+    <table id="mainTable" border="1">
+        <thead>
+            <th>S.No</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Tax (in %)</th>
+            <th>Tax Amount</th>
+            <th>Total Amount</th>
+            <th>Action</th>
+        </thead>
+        <tbody id="mainTableBody">
+
+        </tbody>
+        <tr>
+            <td colspan="7" class="text-right">Total : </td>
+            <td id="totalValue"></td>
+        </tr>
+    </form>
+    </table>
+    <script>
+        product_details=[];
+        function addProduct(){
+            var product_name=document.getElementById("pname").value;
+            var quantity=parseInt(document.getElementById("quantity").value);
+            var price=parseInt(document.getElementById("price").value);
+            var tax=parseInt(document.getElementById("tax").value);
+            var amount=price*quantity;
+            var taxAmount=amount*(tax/100);
+            var totalAmount=amount+taxAmount;
+            var productList={
+                "productName":product_name,
+                "quantity":quantity,
+                "price":price,
+                "amount":amount,
+                "tax":tax,
+                "taxamount":taxAmount,
+                "totalamount":totalAmount
+            }
+            product_details.push(productList);
+            document.getElementById("pname").value="";
+            document.getElementById("quantity").value="";
+            document.getElementById("price").value="";
+            document.getElementById("tax").value="";
+            addList();
+        }
+    function addList(){
+        var product="";
+        var sno=0;
+        product_details.forEach(function(index,product_name,quantity,price,amount,tax,taxAmount,totalAmount){
+            sno+=1;
+            product+="<tr><td>"+sno+"</td><td>"+product_details[product_name].productName+"</td><td>"+product_details[product_name].quantity+"</td><td>"+product_details[product_name].price+"</td><td>"+product_details[product_name].amount+"</td><td>"+product_details[product_name].tax+"</td><td>"+product_details[product_name].taxamount+"</td><td>"+product_details[product_name].totalamount+"</td><td><button class='btn bg-danger text-light' onclick='remove("+product_name+")'>DELETE</button></td></tr>"
+        });
+        document.getElementById("mainTableBody").innerHTML=product;
+    }
+    function remove(id){
+        product_details.splice(id,1);
+        addList();
+    }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

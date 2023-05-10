@@ -1,131 +1,255 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <STYle>
-        @media screen and (min-width:300px) and (max-width:991px){
-            .jeeva{
-                display: none;
-            }
-            .jeeva2{
-                display: none;
-            }
-            .jeeva3{
-                display: none;
-            }
-            .jeeva4{
-                display: none;
-            }
-            .jeeva5{
-                display: none;
-            }
-            .jeeva6{
-                display: none;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/2e00e817e4.js" crossorigin="anonymous"></script>
+    <title>Flipkart</title>
+    <style>
+        @media screen and(max-width<628px) and(max-width<330px){
+        .navbardiv{
+            background-color: #007bff;
         }
-    </STYle>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
-  <body class="bg-warning">
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand col-lg-8 col-md-10 col-sm-10 col-10" href="#"><img src="https://images03.nicepage.com/c461c07a441a5d220e8feb1a/5efce3688b475c0cbd90a8c8/bc8c8a15-0879-45b1-9fbf-9949c41fc17e.png" alt="no images found" srcset=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    }
+    figcaption{
+        font-weight: bold;
+        align-items: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="ml-0 mr-0 pl-0 pr-0">
+        <div class="navbardiv">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="col-lg-2 text-right" style="line-height: 9px;"><a class="navbar-brand" href="#"><img width="75" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt=""></a><br>
+        <a href="#" style="color: white; font-style: italic;">Explore</a><span class="" style="color: yellow; font-style: italic;"> Plus</span><img width="10" src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png" alt="" srcset=""></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav col-lg-4 col-md-2 col-sm-2 col-2">
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-1 my-lg-0">
+            <input class="main-search-bar form-control mr-sm-2 col-lg-8 col-sm-6 col-6" style="width: 600px;" type="search" placeholder="Search for products, brands and more" aria-label="Search"><i class="fa-solid fa-magnifying-glass mr-3 text-primary bg-light p-2"></i>
+            <button class="btn btn-outline-success my-2 my-sm-0 bg-light text-primary" style="font-weight: bold;" type="submit">LOGIN</button>
+          </form>
+          <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link text-light" href="#"><b>Become a Seller</b></a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b>More</b></a>
+              <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" style="color: #007bff;" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M21 19v1H3v-1l2-2v-6c0-3.1 2.03-5.83 5-6.71V4a2 2 0 0 1 2-2a2 2 0 0 1 2 2v.29c2.97.88 5 3.61 5 6.71v6l2 2m-7 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2"/></svg>Preferences</a>
+                <a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" style="color: #007bff;" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 22c-4.714 0-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22Zm0-14.25c-.621 0-1.125.504-1.125 1.125a.75.75 0 0 1-1.5 0a2.625 2.625 0 1 1 4.508 1.829c-.092.095-.18.183-.264.267a6.666 6.666 0 0 0-.571.617c-.22.282-.298.489-.298.662V13a.75.75 0 0 1-1.5 0v-.75c0-.655.305-1.186.614-1.583c.229-.294.516-.58.75-.814c.07-.07.136-.135.193-.194A1.125 1.125 0 0 0 12 7.75ZM12 17a1 1 0 1 0 0-2a1 1 0 0 0 0 2Z" clip-rule="evenodd"/></svg> 24x7 Customer Care</a>
+                <a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" style="color: #007bff;" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M3.5 18.5L2 17l7.5-7.5l4 4l7.1-8L22 6.9l-8.5 9.6l-4-4l-6 6Z"/></svg> Advertise</a>
+                <a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" style="color: #007bff;" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7l7-7z"/></svg> Download App</a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Disabled</a>
+                <a class="ml-4 nav-link active text-light" href="#"><i class="fa-solid fa-cart-shopping text-light" style="letter-spacing: 8px;"></i><b>Cart</b></a>
             </li>
           </ul>
         </div>
       </nav>
-      <img src="https://thumbs.dreamstime.com/b/ingredients-paella-dark-stone-table-wide-screen-chicken-smoked-sausage-shrimps-mussels-bell-pepper-rice-chopped-71967022.jpg" style="width: 100%;" alt="no images found" srcset="">
-      <div class="col-lg-4 col-md-6 col-sm-6 col-6 text-light" style="margin-top: -31%; font-family: sans-serif;">
-        <h2 style="font-size: 44px;"><b>HOMEMADE</b></h2>
-        <h2 style="font-size: 44px;"><b>RESTAURANT</b></h2>
-        <p style="font-size: 20px;">Uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Image from <span style="color: orangered; font-weight: bold;">Freepik</span><br></p>
-        <a href="#" style="color: orangered; font-size: 30px; margin-left: 200px;"><b><u>LEARN MORE</u></b></a>
-      </div>
-      <div style="margin-top: 11%;" class="bg-warning col-lg-6" height="20%">.</div>
-      <div class="d-flex flex-row">
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <img class=" jeeva5" src="https://images03.nicepage.com/c461c07a441a5d220e8feb1a/2c75d4d2250c55c69671ac47/53e1dd434950b108f5d08460962934761237d6ed5a4c704c7c2c7bd3964dc05f_1280.jpg" alt="" height="350" style="background-size: cover;">
+    </div>
+    </div>
+    <div class="d-flex flex-row justify-content-center text-center">
+        <div class="col-lg-6 row">
+            <figure>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" alt="Trulli" style="width:100%">
+                <figcaption>Grocery</figcaption>
+            </figure>
+            <figure>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100" alt="Trulli" style="width:100%">
+                <figcaption>Mobiles</figcaption>
+            </figure>
+            <figure>
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/d34810848b2895c9.png?q=100" alt="Trulli" style="width:100%">
+                <figcaption>Fashion</figcaption>
+            </figure>
+            <figure>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="Trulli" style="width:100%">
+                <figcaption>Electronics</figcaption>
+            </figure>
+            <figure>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100" alt="Trulli" style="width:100%">
+                <figcaption>Home</figcaption>
+            </figure>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 ml-5 justify-content-around bg-light jeeva">
-            <h1 style="font-size: 50px;" class="bg-warning container">Menu</h1>
-            <p style="font-size: 20px; font-weight: bold; text-align: center;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br></p>
-            <span style="color: orangered;"><b>learn more</b></span>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <img class=" jeeva2" src="https://images03.nicepage.com/c461c07a441a5d220e8feb1a/fc662eecb1ff595cb4d5d61c/5ee1dc404c50b108f5d08460962934761237d6ed5a4c704c7c2c7bd3964dc25a_1280.jpg" alt="" srcset="" height="350">
-        </div>
-      </div>
-      <img src="https://thumbs.dreamstime.com/z/dark-food-background-hot-lentil-soup-cooking-ingredients-top-view-frame-healthy-vegan-eating-dark-food-background-135984401.jpg" alt="" width="100%">
-      <div class="bg-warning">
-        <h1 align="center" style="font-size: 50px; font-family: 'Times New Roman', Times, serif; color: orangered; margin-top: -60%;">Learn <b>Cooking</b> Online</h1>
-        <p class="contianer text-light" style="font-size: 20px; text-align: center;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, magni totam, reprehenderit fugiat consequuntur nihil voluptate eum animi autem, iusto voluptas aliquam officiis error rerum cum amet quidem molestias soluta!</p>
-        <p class="text-light" style="font-size: 20px; text-align: center;">IMAGE FROM <span style="color: orangered;">FREEPIK</span></p>
-        <div class="row mr-0 justify-content-center">
-        <div class="bg-light col-lg-3 col-md-3 col-sm-3">
-            <h1 style="font-size: 40px; font-family: 'Times New Roman', Times, serif;">1</h1>
-            <h4 style="font-family: 'Times New Roman', Times, serif;">Base Meals</h4>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-            <a href="#" class="m-5" style="color: orangered;"><b>LEARN MORE</b></a>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3 text-light" style="background-color: transparent;">
-            <h1 style="font-size: 40px; font-family: 'Times New Roman', Times, serif; color: orangered;">2</h1>
-            <h4 style="font-family: 'Times New Roman', Times, serif;">Base Meals</h4>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-            <a href="#" class="m-5" style="color: orangered;"><b>LEARN MORE</b></a>
-        </div>
-        <div class="col-lg-3 col-md-3 col-sm-3 text-light" style="background-color: orangered;">
-            <h1 style="font-size: 40px; font-family: 'Times New Roman', Times, serif;">3</h1>
-            <h4 style="font-family: 'Times New Roman', Times, serif;">Base Meals</h4>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-            <a href="#" class="m-5 text-light"><b>LEARN MORE</b></a>
+        <div class="col-lg-6 row">
+            <figure>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100" alt="Trulli" style="width:100%">
+                <figcaption>Appliances</figcaption>
+            </figure>
+            <figure>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100" alt="Trulli" style="width:100%">
+                <figcaption>Travel</figcaption>
+            </figure>
+            <figure>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="Trulli" style="width:100%">
+                <figcaption>Top Offers</figcaption>
+            </figure>
+            <figure>
+                <img width="64" src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100" alt="Trulli" style="width:100%">
+                <figcaption>Beauty, Toys</figcaption>
+            </figure>
+            <figure>
+                <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/05d708653beff580.png?q=100" alt="Trulli" style="width:100%">
+                <figcaption>Two Wheelers</figcaption>
+            </figure>
         </div>
     </div>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://waltonbd.com/image/catalog/category-banner/mobile/gh11-banner.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://waltonbd.com/image/catalog/category-banner/mobile/gh11-banner.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://waltonbd.com/image/catalog/category-banner/mobile/gh11-banner.jpg" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-      <div class="d-flex bg-light" style="margin-top: 30%;">
-        <div class="col-lg-6 bg-light mt-5">
-            <h1 class="float-right mt-2">Asian</h1>
-            <p class="float-right">While it is important to have naturally occurring sugars in your diet, many foods contain harmful added sugars that contain no nutritional value.</p>
-        </div>
-        <div class="col-lg-6 bg-warning mt-2">
-            <h1 class="mt-5">Food</h1>
-            <p class="float-left">While it is important to have naturally occurring sugars in your diet, many foods contain harmful added sugars that contain no nutritional value.</p>
-        </div>
+      <div class="d-flex flex-row col-lg-12 mt-4">
+        <div class="col-lg-2 col-md-3 col-sm-4 card text-center justify-content-center" style="width: 18rem; padding-top: 100px;">
+            <div class="card-body">
+              <h5 class="card-title">Top Offers</h5>
+              <a href="#" class="btn btn-primary">VIEW ALL</a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 card text-center" style="width: 18rem;">
+            <img class="card-img-top"  height="270px" src="https://rukminim1.flixcart.com/image/200/200/xif0q/mobile/3/5/l/-original-imaghx9qmgqsk9s4.jpeg?q=70" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Iphone 14/14plus</h5>
+              <p class="card-text" style="color: green;">incl of offers</p>
+              <p class="card-text" style="color: grey;">from 67,999*</p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 card text-center" style="width: 18rem;">
+            <img class="card-img-top"  height="270px" src="https://rukminim1.flixcart.com/image/400/400/xif0q/mobile/r/k/h/g73-5g-paux0023in-motorola-original-imagngjh7epkhqdg.jpeg?q=70" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Moto G73</h5>
+              <p class="card-text" style="color: green;">incl of offers</p>
+              <p class="card-text" style="color: grey;">from 16,999*</p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 card text-center" style="width: 18rem;">
+            <img class="card-img-top"  height="270px" src="https://rukminim1.flixcart.com/image/200/200/kzpw2vk0/mobile/u/o/q/galaxy-s21-fe-5g-lavender-8gb-128gb-storage-sm-g990elviinu-original-imagbnbdaj3tygup.jpeg?q=70" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Samsung S21 FE</h5>
+              <p class="card-text" style="color: green;">incl of offers</p>
+              <p class="card-text" style="color: grey;">from 31,999*</p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 card text-center" style="width: 18rem;">
+            <img class="card-img-top"  height="270px" src="https://rukminim1.flixcart.com/image/200/200/l2jcccw0/mobile/i/p/o/-original-imagdu8j9vxscfdh.jpeg?q=70" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Poco M4</h5>
+              <p class="card-text" style="color: green;">incl of offers</p>
+              <p class="card-text" style="color: grey;">from 31,999*</p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 col-sm-4 card text-center" style="width: 18rem;">
+            <img class="card-img-top" height="270px" src="https://rukminim1.flixcart.com/image/200/200/xif0q/mobile/0/h/k/-original-imagcg22czc3ggvw.jpeg?q=70" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Samsung F23</h5>
+              <p class="card-text" style="color: green;">incl of offers</p>
+              <p class="card-text" style="color: grey;">from 14,999*</p>
+            </div>
+          </div>
       </div>
-      <div class="d-flex flex-row justify-content-around">
-        <div class="col-lg-3">
-            <img class="jeeva6" src="https://i0.wp.com/theverybesttop10.com/wp-content/uploads/2015/05/Top-10-Crazy-and-Unusual-Square-Foods-10-510x498.jpg?resize=600%2C586" alt="" height="367">
-        </div>
-        <div class="col-lg-3">
-            <img  class="jeeva3" src="https://salemdigest.com/wp-content/uploads/2016/08/TITS_food1.jpg" alt="">
-        </div>
-        <div>
-            <img class="jeeva4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQItwfK83Bt3Tbz32EEuVJAEXVcFrn4Dut_zA&usqp=CAU" alt="" srcset="" height="367">
-        </div>
+      <div>
+
       </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+      <footer style="background-color: #010f1d;">
+        <div class="pt-3 d-flex flex-row" style="background-color: #010f1d; line-height: 35px;">
+          <div class="col-lg-2">
+            <a href="#" style="color: #6c747c;">ABOUT</a><br>
+            <a href="#" class="text-light">Contact Us</a><br>
+            <a href="#" class="text-light">About Us</a><br>
+            <a href="#" class="text-light">Careers</a><br>
+            <a href="#" class="text-light">Flipkart Stories</a><br>
+            <a href="#" class="text-light">Press</a><br>
+            <a href="#" class="text-light">Flipkart Wholesale</a><br>
+            <a href="#" class="text-light">Corporate Information</a><br>
+          </div>
+          <div class="col-lg-2">
+            <a href="#" style="color: #6c747c;">HELP</a><br>
+            <a href="#" class="text-light">Payments</a><br>
+            <a href="#" class="text-light">Shipping</a><br>
+            <a href="#" class="text-light">Cancellation & Returns</a><br>
+            <a href="#" class="text-light">FAQ</a><br>
+            <a href="#" class="text-light">Report Infringement</a><br>
+          </div>
+          <div class="col-lg-2">
+            <a href="#" style="color: #6c747c;">CONSUMER POLICY</a><br>
+            <a href="#" class="text-light">Return Policy</a><br>
+            <a href="#" class="text-light">Terms Of Use</a><br>
+            <a href="#" class="text-light">Security</a><br>
+            <a href="#" class="text-light">Privacy</a><br>
+            <a href="#" class="text-light">Sitemap</a><br>
+            <a href="#" class="text-light">Grievance Redressal</a><br>
+            <a href="#" class="text-light">EPR Compliance</a><br>
+          </div>
+          <div class="col-lg-1">
+            <a href="#" style="color: #6c747c;">SOCIAL</a><br>
+            <a href="#" class="text-light">Facebook</a><br>
+            <a href="#" class="text-light">Twitter</a><br>
+            <a href="#" class="text-light">Youtube</a><br>
+          </div>
+          <div class="col-lg-2">
+            <p style="color: #6c747c;">Mail Us:</p>
+            <p class="text-light">Flipkart Internet Private Limited,
+              Buildings Alyssa, Begonia &
+              Clove Embassy Tech Village,
+              Outer Ring Road, Devarabeesanahalli Village,
+              Bengaluru, 560103,
+              Karnataka, India</p>
+          </div>
+          <div class="col-lg-3">
+            <p style="color: #6c747c;">Registered Office Address:</p>
+            <p class="text-light">Flipkart Internet Private Limited,
+              Buildings Alyssa, Begonia &
+              Clove Embassy Tech Village,
+              Outer Ring Road, Devarabeesanahalli Village,
+              Bengaluru, 560103,
+              Karnataka, India
+              CIN : U51109KA2012PTC066107
+              Telephone: 044-45614700</p>
+          </div>
+        </div>
+        <hr style="background-color: #6c747c;">
+        <div class="d-flex flex-row pb-4" style="background-color: #010f1d; line-height: 35px;">
+          <div class="col-lg-2">
+            <a href="" style="color: white;"><i class="fa-solid fa-bag-shopping text-warning"></i>  Become a Seller</a>
+          </div>
+          <div class="col-lg-1 text warning">
+            <a href="" style="color: white;"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDE1IDE1Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAlIiB4Mj0iODYuODc2JSIgeTE9IjAlIiB5Mj0iODAuMjAyJSI+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNGRkQ4MDAiLz4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjRkZBRjAwIi8+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTS0zLTNoMjB2MjBILTN6Ii8+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTAuNDkyIDNDNi4zNTMgMyAzIDYuMzYgMyAxMC41YzAgNC4xNCAzLjM1MyA3LjUgNy40OTIgNy41QzE0LjY0IDE4IDE4IDE0LjY0IDE4IDEwLjUgMTggNi4zNiAxNC42NCAzIDEwLjQ5MiAzem0zLjE4IDEyTDEwLjUgMTMuMDg4IDcuMzI3IDE1bC44NC0zLjYwN0w1LjM3IDguOTdsMy42OS0uMzE1TDEwLjUgNS4yNWwxLjQ0IDMuMzk4IDMuNjkuMzE1LTIuNzk4IDIuNDIyLjg0IDMuNjE1eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTMgLTMpIi8+CiAgICA8L2c+Cjwvc3ZnPgo=" alt=""> Launch</a>
+          </div>
+          <div class="col-lg-2">
+            <a href="" style="color: white;"><i class="fa-solid fa-gift text-warning"></i> Gift Cards</a>
+          </div>
+          <div class="col-lg-7 text-light">
+            <a href="" style="color: white;"><i class="fa-solid fa-circle-question text-warning"></i> Help Center</a>
+            &copy; 2007-2023 Flipkart.com <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/payment-method_69e7ec.svg" alt="">
+          </div>
+        </div>
+      
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
 </html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Array Functions</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    Enter the Product to Add : <input type="text" name="product" id="product"><br>
+    <button type="button" class="btn-success" onclick="pushproduct()">PUSH</button>
+    <button type="button" class="btn-success" onclick="unshiftproduct()">UNSHIFT</button><br>
+    <button type="button" class="btn-danger" onclick="popproduct()">POP</button>
+    <button type="button" class="btn-danger" onclick="shiftproduct()">SHIFT</button><br>
+    <table border="1" id="mainTable">
+      <thead>
+        <th>PRODUCT</th> 
+      </thead>
+      <tbody id="mainTableBody">
+
+      </tbody>
+    </table>
+    <table border="1" id="pushproducttable">
+      <thead>
+        <th>Added Product</th>
+      </thead>
+      <tbody id="pushproducttablebody">
+
+      </tbody>
+    </table>
+    <table border="1" id="unshiftproducttable">
+      <thead>
+        <th>Unshifted Product</th>
+      </thead>
+      <tbody id="unshiftproducttablebody">
+
+      </tbody>
+    </table>
+    <table border="1" id="popproducttable">
+      <thead>
+        <th>Popped Product</th>
+      </thead>
+      <tbody id="popproducttablebody">
+
+      </tbody>
+    </table>
+    <table border="1" id="shiftproducttable">
+      <thead>
+        <th>Shifted Product</th>
+      </thead>
+      <tbody id="shiftproducttablebody">
+
+      </tbody>
+    </table>
+    <script>
+      var productlist=[];
+      function pushproduct(){
+        var productname=document.getElementById("product").value;
+        productlist.push(productname);
+        document.getElementById("product").value="";
+        addProduct();
+      }
+      function addProduct(){
+        var add=""
+        productlist.forEach(function(items,index){
+          add+="<tr><td>"+items+"</td></tr>";
+        })
+        document.getElementById("mainTableBody").innerHTML=add;
+      }
+      function unshiftproduct(){
+        var productname=document.getElementById("product").value;
+        productlist.unshift(productname);
+        document.getElementById("product").value="";
+        addProductUnshift();
+      }
+      function addProductUnshift(){
+        var add=""
+        productlist.forEach(function(items,index){
+          add+="<tr><td>"+items+"</td></tr>";
+        })
+        document.getElementById("mainTableBody").innerHTML=add;
+      }
+      function popproduct(){
+        var poppedvalues=productlist.pop();
+        addProduct();
+      }
+      function shiftproduct(){
+        var poppedvalues=productlist.shift();
+        addProductUnshift();
+      }
+      
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

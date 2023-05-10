@@ -1,0 +1,40 @@
+object oriented program is crucial development and is not allow it to flow freely around the system. data more securely to the function that opearetes modification from an outside function. OOPS breaks down a problem into a several entity is an objects and builds data and function around these object
+
+Objects: object are the basic runtime body's in an object oriented framework. They may represent a place, a person, an account, a table of data or the anything that the program handles. object can also represent user defined data such as vectors, time and list
+
+classes : objects hold the data and the function to manipulate the data however the two can be born together in user defined datatype with the help of classes. any number of objects can be created in a classes. each object is associated with the data of typeclass
+
+javascript uses the ES-6 standard
+
+
+Encapsulation : Wrapping or Binding the data and function into a single unit is called. data encapsulation is the most features of the classes. where in the data is not accessible to the outside world and only those functions wrapped inside the classes can access it. these functions serves as the interface between and the object in the data 
+
+
+
+
+Destructuring : in javascript used to retreive particular values from arrays, objects and maps:
+
+Spread Operator : ES-6 provides a new operator called spread opertor that consists of three dots(...). The spread operator allows you to spread out elements of an iterable object such as an array, map or set. ES-6 also has the three dots(...) which is the rest parameters collects of an function into an array.
+                    The spread operator unpacks the element of an iterable object.  the rest parameter packs the element into an array.
+
+JavaScript Spread Operator and apply method : 
+
+Arrow Function : ES-6 Arrow Function provide you with alternate way to write a shorter syntax compared to the function expression
+
+MAP : what is javascript map function? Map creates a new array from calling a function for every array element. Map does not execute the function for empty elements. Map does not change the original value.
+Syntax : Map((element)=>{})
+        Map((element,index)=>{})
+        Map((element,index,array)=>{})
+
+how to use a map function over an array of an object : 
+
+Inheritance : Using class inheritance a class inherit all the methods and properties of another classes.
+Super keyword is used to access to call an object parents. It can be used to. Super keyword is denotes it parent class.
+
+If a child class having same method or property name as that of the parent class it will use the method and property of the child class.
+
+
+
+Scope of variable refers to the particular variable within the program.
+
+what are the scope of variable : scope of variable is it the lifetime in the program this means that scope of a variable is a block of code in the entire program where the variable is declared used an can be modified 

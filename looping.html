@@ -1,54 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Looping Statements</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div>
+    <form action="">
+      Starting Value : <input type="text" id="startvalue" name="start" value=""><br>
+      Ending Value : <input type="text" id="endvalue" name="end" value=""><br> 
+      <button type="button" onclick="asc_odd()">Ascending ODD</button>
+      <button type="button" onclick="asc_even()">Ascending EVEN</button>
+      <button type="button" onclick="desc_odd()">Descending ODD</button>
+      <button type="button" onclick="desc_even()">Descending EVEN</button>
+      <button type="button" onclick="fibonacci()">Fibonacci</button><br>
+      <div class="card" style="width: 30rem;">
+        <div class="card-body">
+          <h1 class="card-title align-center">Counter</h1>
+          <a href="#" class="btn btn-danger" onclick="decrement()">Decrement</a><label for="" class="p-5" style="font-size: 30px; font-weight: bold;" id="counter">0</label><a href="#" class="btn btn-success" onclick="increment()">Increment</a>
+        </div>
+      </div>
+    </form>
+</div>
     <script>
-        function primenumber(){
-            let n = document.getElementById("prime").value;
-            for (i = 1; i <= n; i++) {
-            count = 0;
-            for (j = 2; j <= i / 2; j++) {
-            if (i % j == 0) {
-           count++;
-           break;
-  }
-  }
-         if (count == 0) {
-          document.write(i);
-          document.write("<br>");
-     }
-  }
+        function asc_odd(){
+            var start=parseInt(document.getElementById("startvalue").value);
+            var end=parseInt(document.getElementById("endvalue").value);
+            for(i=start;i<=end;i++){
+                if(i%2!=0){
+                    console.log(i);
+                }
+            }
+        }
+        function asc_even(){
+            var start=parseInt(document.getElementById("startvalue").value);
+            var end=parseInt(document.getElementById("endvalue").value);
+            for(i=start;i<=end;i++){
+                if(i%2==0){
+                    console.log(i);
+                }
+            }
+        }
+        function desc_odd(){
+            var start=parseInt(document.getElementById("startvalue").value);
+            var end=parseInt(document.getElementById("endvalue").value);
+            for(i=start;end>=start;end--){
+                if(end%2!=0){
+                    console.log(end);
+                }
+            }
+        }
+        function desc_even(){
+            var start=parseInt(document.getElementById("startvalue").value);
+            var end=parseInt(document.getElementById("endvalue").value);
+            for(i=start;end>=start;end--){
+                if(end%2==0){
+                    console.log(end);
+                }
+            }
         }
         function fibonacci(){
-            var a=parseInt(document.getElementById("range").value);
+            var a=parseInt(document.getElementById("endvalue").value);
             var b=0,c=1,d;
-            document.getElementById("first").value=b;
-            document.getElementById("second").value=c;
-            document.write(b);
-            document.write("<br>");
-            document.write(c);
-            document.write("<br>");
+            console.log(b);
+            console.log(c);
             for(i=2;i<=a+1;i++){
                 d=b+c;
-                document.write(d);
-                document.write("<br>");
+                console.log(d);
                 b=c;
                 c=d;
             }
         }
+        function increment(){
+            setInterval(function() {
+            var incre=parseInt(document.getElementById("counter").innerText);
+            incre=incre+1;
+            if(incre>0){
+                document.getElementById("counter").innerHTML="<span class='text-success'>"+incre+"</span>";
+            }else if(incre==0){
+                document.getElementById("counter").innerHTML=incre;
+            }else if(incre<0){
+                document.getElementById("counter").innerHTML="<span class='text-danger'>"+incre+"</span>";
+            }
+        }, 1000);
+        }
+        function decrement(){
+            setInterval(function() {
+            var decre=parseInt(document.getElementById("counter").innerText);
+            decre=decre-1;
+            if(decre>0){
+                document.getElementById("counter").innerHTML="<span class='text-success'>"+decre+"</span>";
+            }else if(decre==0){
+                document.getElementById("counter").innerHTML=decre;
+            }else if(decre<0){
+                document.getElementById("counter").innerHTML="<span class='text-danger'>"+decre+"</span>";
+            }
+        }, 1000);
+        }
     </script>
-    <title>Document</title>
-</head>
-<body>
-    <h2>Prime Number</h2>
-    Enter the Number : <input type="text" id="prime"><br>
-    <button onclick="primenumber()">Click to Generate Prime Number</button>
-    <h2>Fibonacci Series</h2>
-    Enter the First Number : <input type="text" id="first"><br>
-    Enter the Second Number : <input type="text" id="second"><br>
-    Enter the Range : <input type="text" id="range"><br>
-    <button onclick="fibonacci()">Click to Generate Fibonacci Series</button><br><br><br>
-</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
