@@ -1,67 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-        <h1>Welcome</h1>
-        <h1>to</h1>
-        <h1>Full</h1>
-        <h1>Stack</h1>
-        <h1>KGISL</h1>
-        <p>ksjbihghuy</p>
-        <p>kdjvndjhbfuh</p>
-        <p>sfnksjnfhn</p>
-        <label for="firstname">First Name : </label>
-        <input type="text" id="firstname" name="name" required><br>
-        <label for="lastname">Last Name : </label>
-        <input type="text" id="lastname" name="lastname" required><br>
-        <label for="phone">Phone No. : </label>
-        <input type="number" id="phone" name="phone" required><br>
-        <div class></div>
-        <button onclick="personInfo()">SUBMIT</button>
-        <div class="divheading">FirstDiv</div>
-        <div class="divheading">SecondDiv</div>
-    <script>
-        function personInfo(){
-            var fname=document.getElementById("firstname").value;
-            var lname=document.getElementById("lastname").value;
-            var phone=document.getElementById("phone").value;
-            var name=document.getElementsByName("name");
-            var tag=document.getElementsByTagName("h1");
-            var para=document.getElementsByTagName("p");
-            var classname=document.getElementsByClassName("divheading");
-            console.log("h1 count is "+tag.length);
-            console.log("p count is "+para.length);
-            console.log(classname);
-            console.log(name.length);
-            console.log(name[0]);
-            console.log(typeof(phone));
-            console.log(tag);
-            tag[2].innerHTML="<p>Good Morning</p>";
-            console.log(tag[2]);
-            for(i=0;i<tag.length;i++){
-                if(i%2==0){
-                    tag[i].style.color="red";
-                }else{
-                    tag[i].style.color="blue";
-                }
-                console.log(tag);
-            }
-            var x=para[0];
-            // if(fname==""||fname==null){
-            //     alert("Please enter First Name");
-            // }else if(lname==""||lname==null){
-            //     alert("Please enter Last Name");
-            // }else if(phone==""||phone==null){
-            //     alert("Please enter Phone Number");
-            // }else{
-            //     alert("Success");
-            // }
-        }
-    </script>
-</body>
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+    table td{
+        border:1px solid black;
+    }
+  </style>
+  <body>
+      <script>
+        var product=[{
+            image_source:"https://assets.ajio.com/medias/sys_master/root/20220304/R2AD/62214fd1aeb26921afc77f41/-1117Wx1400H-463938180-peach-MODEL.jpg",
+            product_brand:"Classic Polo",
+            product_price:750
+        },{
+            image_source:"https://i.pinimg.com/222x/14/15/6a/14156a5558a27fbbde72ce97cf4c8441.jpg",
+            product_brand:"Puma",
+            product_price:950
+        },{
+            image_source:"https://assets.adidas.com/images/w_600,f_auto,q_auto/4eae3d7aaa084481b313adde0147f493_9366/SPORT_PERFORMANCE_BANGLORE_LOGO_GRAPHIC_TEE_Black_HM4204_01_laydown.jpg",
+            product_brand:"Adidas",
+            product_price:1250
+        },{
+            image_source:"https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71OECOR-bML._UL1500_.jpg",
+            product_brand:"Nike",
+            product_price:4500
+        }]
+        var x = document.createElement("table");
+        x.setAttribute("id", "myTable");
+        document.body.appendChild(x);
+
+        for(i=1;i<=product.length;i++){
+        var y = document.createElement("tr");
+        y.setAttribute("id", "myTr");
+        document.getElementById("myTable").appendChild(y);
+
+        var z = document.createElement("td");
+        var t = document.createTextNode("cell");
+        z.appendChild(t);
+        document.getElementById("myTr").appendChild(z);
+    }
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>

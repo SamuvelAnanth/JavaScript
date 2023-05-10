@@ -1,0 +1,10 @@
+emp={
+    "employees":[{"firstName":"John","lastName":"Doe"},
+    {"firstName":"Anna","lastName":"Smith"},
+    {"firstName":"Peter","lastName":"Jones"}
+    ]
+    }
+    console.log(emp.employees[2].firstName)
+    for(i=0;i<emp.employees.length;i++){
+        console.log(emp.employees[i].firstName);
+    }

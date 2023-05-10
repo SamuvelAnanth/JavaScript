@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+    .tableBorder{
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+    }
+    #myTable{
+        border:1px solid black;
+    }
+    td{
+        border:1px solid black;
+    }
+  </style>
+  <body>
+      <div id="divid">
+
+      </div>
+      <script>
+    //     for(var i=1;i<=5;i++){
+    //     var image=document.createElement("img");
+    //      image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShm6zc3us0nXzJ6vWC89gXZkkTsFgYeucvojYIJM_Y&s";
+    //   var divid=document.getElementById("divid");
+    //     divid.appendChild(image);
+    //     }
+    let obj = [{
+    img: "https://cdn.pixabay.com/photo/2016/12/06/09/31/blank-1886008__340.png",
+    product: "polo-tshirt",
+    price: 750,
+    size: 'XL'
+}, {
+    img: "https://www.shutterstock.com/image-vector/denim-260nw-167397755.jpg",
+    product: "denim-Shirt",
+    price: 1550,
+    size: 'S'
+}, {
+    img: "https://cdn.pixabay.com/photo/2016/12/06/09/31/blank-1886008__340.png",
+    product: "polo-tshirt",
+    price: 750,
+    size: 'XXl'
+}, {
+    img: "HI",
+    product: "denim-Shirt",
+    price: 1550,
+    size: 'M'
+}]
+    var table_name=document.createElement("table");
+    table_name.setAttribute("id","myTable");
+    table_name.setAttribute("class","tableBorder");
+    document.body.appendChild(table_name);
+        for(var i=0;i<obj.length;i++){
+    var y=document.createElement("tr");
+    y.setAttribute("id","myTr"+i);
+    document.getElementById("myTable").appendChild(y);
+    for(let j=0; j< Object.keys(obj[i]).length;j++) {
+        let z=document.createElement("td");
+        
+        let checkType = typeof(obj[i][Object.keys(obj[i])[j]]);
+        var objKeyValue;
+        if(checkType != 'number') {
+        
+            objKeyValue = (obj[i][Object.keys(obj[i])[j]]).split(":");
+        }
+        
+        if(objKeyValue[0] == 'https' || objKeyValue[0] == 'http') {
+            let imgTag = document.createElement('img');
+            imgTag.src = obj[i][Object.keys(obj[i])[j]]
+            z.appendChild(imgTag);
+        } else {
+            let t=document.createElement("p");
+            t.innerHTML=obj[i][Object.keys(obj[i])[j]];
+            z.appendChild(t);
+        }
+        
+        document.getElementById("myTr"+i).appendChild(z);
+    }  
+};
+        
+//    var tableRow = table_name.createElement("tr");
+//    tableRow.createElement("td");
+//    tableRow.createElement("td");
+//     tableRow.createElement("td");
+    
+    // var divid=document.getElementById("divid");
+    // divid.appendChild(table_name);
+
+
+
+
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

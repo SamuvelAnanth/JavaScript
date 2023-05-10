@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <div id="maindiv" on onmouseover="inOver()" onmouseout="inOut()" style="background-color: blue;width: 120px; height: 20px; padding: 40px;">
+
+      </div>
+      <input type="email" id="textb" onchange="mailcheck()">
+      Password : <input type="password" name="pass" id="pass"><br>
+      Confirm Password : <input type="password" name="cpass" id="cpass" onblur="func_blur()">
+      <select name="myselect" id="myselect" onchange="func_select()">
+        <option value="audi">Audi</option>
+        <option value="bmw">BMW</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="volvo">Volvo</option>
+    </select>
+    <p>When you select a new car, a function is triggered which outputs the value of the selected car</p>
+    <p id="demo"></p>
+      <script>
+        function inOver(){
+            //alert("Mouse Over");
+            console.log("Mouse Over");
+        }
+        function inOut(){
+            //alert("Mouse Out")
+            console.log("Mouse Out");
+        }
+        function func_blur(){
+            var password=document.getElementById("pass").value;
+            var con_password=document.getElementById("cpass").value;
+            console.log(password+"--"+con_password);
+            if(password==con_password){
+                console.log("password is matched")
+            }else{
+                console.log("password is not matched")
+            }
+        }
+        function func_select(){
+            var x=document.getElementById("myselect").value;
+            document.getElementById("demo").innerHTML="You Selected "+x;
+        }
+        document.getElementById("textb").setAttribute("name","textb");
+        document.getElementById("textb").setAttribute("class","firsttextbox");
+        document.getElementById("textb").setAttribute("autocomplete","off");
+        var myname=document.getElementById("textb");
+        //let aget=myname.getAttribute();
+        console.log(myname[0]);
+        function mailcheck(){
+          var check=document.getElementById("textb").value;
+          var toChange=check.toLowerCase();
+          console.log(toChange);
+        }
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+        Name : <input type="email" name="inp" id="inp"><label for="" id="display"></label>
+        <button type="button" onclick="validate()"> Validate</button>
+      <script>
+        function validate(){
+            var input=document.getElementById("inp").value;
+            //var result=/[abc]/ig;
+            //var valid=input.match(result);
+            //console.log(valid);
+            //var newexp=new RegExp("[abc]","ig");
+            //var newexp=new RegExp("^[abc]","ig")
+            //var newexp=new RegExp("[^abc]","ig")
+            //var newexp=new RegExp("[a-zA-Z0-9\-,\.@+\*]","ig");
+            //var newexp=new RegExp("[a-zA-Z0-9\-,\.@+\*]{4}","ig");
+            /*var newexp=new RegExp("[a-E]","g");
+            var newres=input.match(newexp);
+            console.log(newres);*/
+            /*let text="re,green,red,green,gren,gr,blue,yellow";
+            let pattern=/(red|green)/g;
+            let result=text.match(pattern);
+            console.log(result);*/
+            let text="Give 100%_!"
+            let pattern=/\w\W/g;
+            let pattern1=/\W/g;
+            let result=input.match(pattern);
+            let result1=input.match(pattern1);
+            //console.log(result);
+            //console.log(result1);
+            let z="Hellooo World! Hello !"
+            let y=/l*/g;
+            let x=z.match(y);
+            //console.log(x);
+            let a="1,100 or 1000 2100?";
+            let b=/10*/g;
+            let c=a.match(b);
+            //console.log(c);
+            let e=new RegExp("[89][0-9]{9}");              //Mobile Validations
+            let f=input.match(e);
+            //console.log(f);
+            let m1=new RegExp("[a-zA-Z]+[@][a-z]+[\.][a-z]{2,3}");         //Quite Complicated
+            //let n1=new RegExp("([a-z0-9]+)@([a-z]+)\.([a-z]{2,3})");      //Block by Block
+            let m=new RegExp("[a-z0-9]+@[a-z]+\.[a-z]{2,3}");            //Easy to Work
+            let n=input.test(m);
+            //console.log(n);
+            }
+      </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
